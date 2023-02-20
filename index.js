@@ -1,15 +1,10 @@
 let amount = prompt("Введите количество элементов");
-let arr = amount.split('');
+let arr = amount.split(',');
 console.log(arr);
 
-for ( let i = 0; i < arr.length; i++ ) {
-    if ( arr !== 'number' ) {
-        arr.sort();
-    }
-}
-console.log(arr);
+let sortnumbers = arr.sort((a,b) => a - b);
+console.log(sortnumbers);
 
-let newSet = new Set(arr);
-let uniquesymbols = Array.from(newSet);
-
-console.log(uniquesymbols);
+sortnumbers.splice(2, 3);
+console.log(sortnumbers);
+// 3, -9, 8, 38, -4, 0
